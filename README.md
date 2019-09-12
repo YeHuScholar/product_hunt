@@ -1,1 +1,1 @@
-product_hunt
+我的第二个Django项目
