@@ -28,22 +28,24 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
+
               {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href=" {% url '退出页面' %} ">退出</a>
+                    <a class="nav-item nav-link" href="Javascript:{document.getElementById('退出').submit()}">退出</a>
                 </li>
-                <form method="POST" action=" {% url '退出页面' %} " align="center">
+                <form id="退出" method="POST" action=" {% url '退出页面' %} ">
                     {% csrf_token %}
                     <input type="hidden">
                 </form>
-              {% elif %}
-              {% endif %}
+              {% else %}
                 <li class="nav-item">
-                <a class="nav-link" href=" {% url '登录页面' %} ">登录</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href=" {% url '注册页面' %} ">注册</a>
-              </li>
+                    <a class="nav-link" href=" {% url '登录页面' %} ">登录</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=" {% url '注册页面' %} ">注册</a>
+                </li>
+              {% endif %}
+                
             </ul>
           </div>
         </nav>
