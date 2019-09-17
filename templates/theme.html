@@ -31,6 +31,7 @@
 
               {% if user.is_authenticated %}
                 <li class="nav-item">
+                    <a class="nav-link" href=" {% url '发布页面' %} ">发布</a>
                     <a class="nav-item nav-link" href="Javascript:{document.getElementById('退出').submit()}">退出</a>
                 </li>
                 <form id="退出" method="POST" action=" {% url '退出页面' %} ">
@@ -45,7 +46,7 @@
                     <a class="nav-link" href=" {% url '注册页面' %} ">注册</a>
                 </li>
               {% endif %}
-                
+
             </ul>
           </div>
         </nav>
