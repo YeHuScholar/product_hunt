@@ -12,20 +12,20 @@
     <h2 align="center">发布新的应用</h2>
     <br>
 
-    <form method="POST" action=" {% url '注册页面' %} " align="center">
+    <form method="POST" action=" {% url '发布页面' %} " align="center" enctype="multipart/form-data">
         {% csrf_token %}
         标题：
         <br>
-        <input type="text" name="标题">
+        <input type="text" name="标题" value="例：抖音-用短视频记录美好生活">
         <br>
         <br>
         介绍：
         <br>
-        <textarea cols="100" rows="10" name="介绍"></textarea>
+        <textarea cols="100" rows="10" name="介绍">在这里写APP的介绍</textarea>
         <br>
         <br>
         APP链接：
-        <input type="text" name="APP链接">
+        <input type="text" name="APP链接" value="http://">
         <br>
         <br>
         APP图标(缩略图)：
