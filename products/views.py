@@ -12,7 +12,7 @@ def product_list(request):
 
 
 def detail(request, product_id):
-    product = get_object_or_404(Product, primary_key=product_id)
+    product = get_object_or_404(Product, pk=product_id)
     return render(request, 'detail.html', {'product': product})
 
 
